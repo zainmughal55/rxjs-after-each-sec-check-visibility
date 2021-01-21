@@ -11,10 +11,8 @@ setTimeout(() => {
 }, 4000);
 const source = of("a").pipe(
   switchMap(() => {
-    return from(new Array(1, 2, 3, 4, 5)).pipe(
+    return from(new Array(1, 2, 3, 4, 5, 6)).pipe(
       concatMap((i, index) => {
-        if (i === 3) {
-        }
         return of(i).pipe(delay(1000));
       }),
       last(),
