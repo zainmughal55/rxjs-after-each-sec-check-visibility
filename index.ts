@@ -10,10 +10,11 @@ setTimeout(() => {
   var list = document.getElementById("myList");
   list.insertBefore(newItem, list.childNodes[0]);
 }, 4000);
+
 const source = of("a").pipe(
   switchMap(() => {
-    return from(new Array(1, 2, 3, 4, 5, 6)).pipe(
-      concatMap((i, index) => {
+    return from(new Array(10)).pipe(
+      concatMap(() => {
         if (document.querySelector(".test1")) {
           return of(true);
         } else {
