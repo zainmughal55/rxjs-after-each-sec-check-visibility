@@ -1,5 +1,5 @@
 import { of, from } from "rxjs";
-import { map, filter, delay, concatMap, switchMap, last } from "rxjs/operators";
+import { delay, concatMap, switchMap, last } from "rxjs/operators";
 
 setTimeout(() => {
   var newItem = document.createElement("LI");
